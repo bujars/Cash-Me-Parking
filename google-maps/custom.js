@@ -85,13 +85,13 @@ function createMarker(latlng, name, address1, address2, postalCode){
 	    icon: markerImage
 	});
 
-    /*var marker2 = new google.maps.Marker({
+    var marker2 = new google.maps.Marker({
        map: map,
-       position: new google.maps.LatLng(40.730610, -73.935242),
+       position: new google.maps.LatLng(40.734872, -73.986242),
        icon: 'marker2.png'
-     })
-    */
-    var cityCircle = new google.maps.Circle({
+     });
+    
+    /*var cityCircle = new google.maps.Circle({
             strokeColor: '#FF0022',
             strokeOpacity: 0.8,
             strokeWeight: 2,
@@ -100,7 +100,7 @@ function createMarker(latlng, name, address1, address2, postalCode){
             map: map,
             center: new google.maps.LatLng(40.730610, -73.935242),
             radius: 5
-	});
+	});*/
 
     // This event expects a click on a marker
     // When this event is fired the Info Window content is created
@@ -120,9 +120,9 @@ function createMarker(latlng, name, address1, address2, postalCode){
         // opening the Info Window in the current map and at the current marker location.
         infoWindow.open(map, marker);
 	});
-    /*google.maps.event.addListener(marker2, 'click', function() {
+    google.maps.event.addListener(marker2, 'click', function() {
        infowindow.open(map, marker2);
-       });*/
+       });
 
 }
 /* Side Navigation */ 
