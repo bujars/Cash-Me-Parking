@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Parking Spot CashIn</title>
+        <title>Cash Me Parking</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -9,71 +9,105 @@
     </head>
     <style>
 
+</head>
+<body>
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 </style>
 </head>
 <body>
 
-<!-- SIDEBAR --!>
-
-<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
 </div>
 
-<!-- Page Content -->
-<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
-<div>
-  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
-  <div class="w3-container">
-    <h1>Sidebar Overlay</h1>
-    <p>The w3-overlay class can be used to create an overlay effect, when opening the sidebar. The w3-overlay class adds a black background with a 50% opacity to the "page content" - this effect will "highlight" the side navigation</p>
-    <p>Click on the "hamburger menu" to see the effect.</p>
-  </div>
+<div id="main">
+  <!--<h2>Sidenav Push Example</h2>
+  <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+  -->
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 </div>
-     
+
 <script>
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
 </script>
 
 
         <div class="container">
-
             <div class="row">
-
                 <div class="col-lg-8 col-lg-offset-2">
-
-                    <h1>Cash me parking how bout dat <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>
-
-                    <p class="lead">This is a demo for our tutorial showing you how to add a custom styled Google maps into a Bootstrap page.</p>
-
-                    <p>dont know what this is</p>
-
-                    <p><strong>Parking Spot</strong> The purpose of this is for me to find out whats going on.<em>next thing</em> lol <code>lll</code>, whaat <a href="#">Ut felis.</p>
-                    
+                    <h1>Cash Me Parking how bout dat <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>
+                    <p class="lead">Elevator Pitch</p>
+                    <p>What this does.</p>
+                    <p><strong>Parking Spot</strong> The purpose of this is for me to find out whats going on.<em>next thing</em> lol <code>lll</code>, whaat <a href="#">Ut felis.</p>  
                 </div><!-- /.8 -->
-
             </div> <!-- /.row-->
-
         </div> <!-- /.container-->
-
         <div id="map"></div>
-
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-        
-        
         <script src="custom.js"></script>
     </body>
 </html>
