@@ -89,8 +89,15 @@ function createMarker(latlng, name, address1, address2, postalCode){
        map: map,
        position: new google.maps.LatLng(40.734872, -73.986242),
        icon: 'marker2.png'
-     });
-    
+     
+    });
+    /*    var iwContent2 = '<div id="iw_container">' +
+              '<div class="iw_title">' + "You" + '</div>' +
+           '<div class="iw_content">' + "are" + '<br />' +
+           "Here" + '<br />' +
+	"" + '</div></div>';*/
+
+
     /*var cityCircle = new google.maps.Circle({
             strokeColor: '#FF0022',
             strokeOpacity: 0.8,
@@ -113,16 +120,23 @@ function createMarker(latlng, name, address1, address2, postalCode){
            '<div class="iw_content">' + address1 + '<br />' +
            address2 + '<br />' +
 	    postalCode + '</div></div>';
-
         // including content to the Info Window.
         infoWindow.setContent(iwContent);
-
         // opening the Info Window in the current map and at the current marker location.
         infoWindow.open(map, marker);
 	});
+
+
+
     google.maps.event.addListener(marker2, 'click', function() {
+      var iwContent2 = '<div id="iw_container">' +
+              '<div class="iw_title">' + "You" + '</div>' +
+           '<div class="iw_content">' + "are" + '<br />' +
+           "Here" + '<br />' +
+	  "" + '</div></div>';
+       infoWindow.setContent(iwContent2);
        infowindow.open(map, marker2);
-       });
+	});
 
 }
 /* Side Navigation */ 
