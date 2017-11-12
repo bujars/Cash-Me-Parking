@@ -1,38 +1,3 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-h1{
-    text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 40px;
-}
-
-
-}
-
-.info-window {
-    font-family: 'Montserrat', sans-serif;
-}
-.info-content {
-    color: #999;
-}
-
-
-#map { 
-  height: 100%; 
-  width: 100%; 
-  position:absolute; 
-  top: 0; 
-  left: 0; 
-  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
-}
-
-
-
-
-
-
-
-
-
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -146,5 +111,3 @@ input[type=text] {
 input[type=text]:focus {
     width: 100%;
 }
-
-
