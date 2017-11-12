@@ -1,2 +1,2 @@
 # Cash Me Parking
-The google maps file is the same files in the main. 
+The google maps folder contains the same files as main. 
