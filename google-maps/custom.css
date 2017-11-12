@@ -37,7 +37,7 @@ h1{
 .sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
+    position: relative; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
@@ -64,7 +64,7 @@ h1{
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 25px;
     font-size: 36px;
@@ -89,7 +89,7 @@ h1{
 .sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
+    position: relative; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
@@ -116,7 +116,7 @@ h1{
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
-    position: absolute;
+    position: realative;
     top: 0;
     right: 25px;
     font-size: 36px;
